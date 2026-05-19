@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #080808;
+  --color-brand-surface: #1a1a1a;
+  --color-brand-red: #e8291c;
+  --color-brand-border: #333333;
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --spacing-section-desk: 120px;
+  --spacing-section-mob: 64px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-black);
+    color: white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-red text-white uppercase font-bold rounded hover:bg-red-700 transition-colors inline-block text-center cursor-pointer;
+  }
+  
+  .section-padding {
+    @apply py-section-mob md:py-section-desk;
+  }
+  
+  .container-max {
+    @apply max-w-[1140px] mx-auto px-4 md:px-6;
+  }
+}
